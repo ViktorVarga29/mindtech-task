@@ -18,7 +18,7 @@ const AppProvider = ({children}) => {
     useEffect(() => {
         if (savedToken) {
             console.log(savedToken)
-            axios.get(apiUrl + '/list', {headers: {'Authorization': savedToken}}).then(res => setCaught(res.data.catches))
+            axios.get(apiUrl + '/list', {headers: {'Authorization': savedToken}}).then(res => setCaught(res.data.catches ?? []))
         }
     }, [savedToken])
 
