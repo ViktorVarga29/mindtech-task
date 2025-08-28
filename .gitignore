@@ -1,0 +1,4 @@
+/.idea
+/.venv
+/backend/pokemons.db
+/frontend/node_modules
